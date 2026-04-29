@@ -1,0 +1,38 @@
+h1{
+    text-align: center;
+    font-size: 4em;
+    background-color: gray;
+    padding: 100px;
+    margin: 50px;
+}
+
+h3{
+    margin: 50px;
+}
+
+p{
+    margin: 50px;
+}
+
+.texto-principal{
+    background-color: aquamarine;
+    padding: 10px;
+    margin: 30px;   
+}
+
+.listas{
+    margin: 50px;
+    background-color: rgb(182, 182, 182);
+    padding: 20px;
+    align-items: center;
+}
+
+ol > li{
+    background-color: blueviolet;
+    border: 10px;
+}
+
+#final-message{
+    font-size: 3em;
+    text-align: center;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body onload="comenzarCountdown()">
+    <h1>EL LOCO LOPEZ</h1>
+    <span id="countDown"></span>
+    
+    <p>1. De que color era el caballo blanco de San Martin?</p>
+    <input type="text" id="r1">
+    
+    <p>2. Cuantos culos comio Guido Kazcka?</p>
+    <input type="text" id="r2">
+
+    <p>3. Por que no puedo hacer esto solo?</p>
+    <input type="text" id="r3">
+    
+    <br><br>
+
+    <button onclick="finalizado()">Finalizado!</button>
+    <br><br>
+    <button onclick="restart()">Reiniciar</button>
+
+    <script>
+        let tiempoFinalizado;
+        let intervaloTiempo;
+
+        function comenzarCountdown(){
+            tiempoFinalizado = setTimeout(tiempoCumplido, 30000);
+            intervaloTiempo = setInterval(ticTac, 1000);
+            document.getElementsById("countDown").textContent = 30;
+        }
+
+        function ticTac(){
+            let tiempo = document.getElementById("countDown").textContent;
+
+            document.getElementById("countDown").textContent = tiempo - 1;
+        }
+
+        function tiempoCumplido(){
+            clearInterval(intervaloTiempo);
+            document.getElementById("countDown").textContent = 0;
+            alert("Loser!");
+        }
+
+        function finalizado(){
+            clearTimeout(tiempoFinalizado);
+            clearInterval(intervaloTiempo);
+            let fecha = new Date();
+            
+            let respuesta1 = document.getElementById("r1").value;
+            let respuesta2 = document.getElementById("r2").value;
+            let respuesta3 = document.getElementById("r3").value;
+
+            let mensajeFinal = fecha.toLocaleDateString("es-Es") + "\n" + "1. " + respuesta1 + "\n" +
+                                                                + "\n" + "2. " + respuesta2 + "\n" +
+                                                                + "\n" + "3. " + respuesta3;
+            alert(mensajeFinal);
+        }
+
+        function restart(){
+            location.reload();
+        }
+    </script>
+</body>
+</html>
