@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleatorio</title>
+</head>
+<body>
+    <button onclick="crearAleatorio(10, 15)" id="btn">Randomize</button>
+    <h2>Numero aleatorio: <span id="randomNum">---</span></h2>
+
+    <script>
+
+        let generateNum = document.getElementById("randomNum");
+        //Asi podemos generar un numero random pero que unicamente se funcionara entre 0 y 1
+        // function crearAleatorio(){
+        //     generateNum.textContent = Math.floor(Math.random());
+        // }
+
+        // De esta forma podemos, a traves de un parametro en el llamado de la funcion, generar un numero aleatorio que se encuentre hasta el numero que ingresemos en el llamado de la misma
+        // function crearAleatorio(maximo){
+        //     maximo = maximo + 1;
+        //     generateNum.textContent = Math.floor(Math.random() * maximo);
+        // }
+
+        // Para establecer un minimo en la operacion, con dos parametros funcionaria de la siguiente manera
+        // function crearAleatorio(minimo, maximo){
+        //     maximo = maximo + 1;
+        //     resultado = Math.floor(Math.random()) * (maximo - minimo) + minimo;
+        //     generateNum.textContent = resultado;
+        // }
+
+    </script>
+</body>
+</html>
